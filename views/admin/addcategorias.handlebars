@@ -1,0 +1,21 @@
+{{#each erros}}
+    <div class="mt-4 alert alert-danger">{{texto}}</div>
+  {{else}}
+{{/each}}
+    <h3 class="mt-4">Nova categoria</h3>
+      <div class="card">
+        <div class="card-body">
+        <form action="/admin/categorias/add" method="POST" class="mt-4">
+          <div class="form-group">
+
+            <label for="nome" class="">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="nome">
+          </div>
+          <div class="form-group">
+            <label for="slug">Slug</label>
+            <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
+          </div>
+          <button type="submit" class="btn btn-success">Salvar</button>
+      </form>
+    </div>
+  </div>
